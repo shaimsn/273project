@@ -33,17 +33,32 @@
  .PARAM post2	=  0.00		* Driver 2nd post-cursor pre-emphasis
 
 * PCB Line Lengths *
-* Shortest Lengths
-* .PARAM len1	= 1		* Line segment 1 length, inches
-* .PARAM len2	= 0.25	* Line segment 2 length, inches
-* .PARAM len3	= 4		  * Line segment 3 length, inches
-* .PARAM len4	= 1		  * Line segment 4 length, inches
+
+* XBAR -> LINECARD *
+* Shortest Lengths *
+ .PARAM len1	= 1		    * Line segment 1 length, inches
+ .PARAM len2	= 0.25	  * Line segment 2 length, inches
+ .PARAM len3	= 5		    * Line segment 3 length, inches
+ .PARAM len4	= 1		    * Line segment 4 length, inches
 
 * Longest Lengths
-* .PARAM len1	= 13		* Line segment 1 length, inches
-* .PARAM len2	= 0.25	* Line segment 2 length, inches
-* .PARAM len3	= 4		  * Line segment 3 length, inches
-* .PARAM len4	= 1		  * Line segment 4 length, inches
+ .PARAM len1	= 12.75		* Line segment 1 length, inches
+ .PARAM len2	= 0.25	  * Line segment 2 length, inches
+ .PARAM len3	= 11		  * Line segment 3 length, inches
+ .PARAM len4	= 1		    * Line segment 4 length, inches
+
+* LINECARD -> XBAR *
+* Shortest Lengths
+* .PARAM len1	= 5.75		* Line segment 1 length, inches
+* .PARAM len2	= 0.25	  * Line segment 2 length, inches
+* .PARAM len3	= 0.25		* Line segment 3 length, inches
+* .PARAM len4	= 1		    * Line segment 4 length, inches
+
+* Longest Lengths
+* .PARAM len1	= 11.75		* Line segment 1 length, inches
+* .PARAM len2	= 0.25	  * Line segment 2 length, inches
+* .PARAM len3	= 12		  * Line segment 3 length, inches
+* .PARAM len4	= 1		    * Line segment 4 length, inches
 
 * Eye delay -- In awaves viewer, plot signal rx_diff against signal eye
 *              then adjust parameter edui to center the data eye.
