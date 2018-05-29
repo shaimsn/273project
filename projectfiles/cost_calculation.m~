@@ -1,0 +1,31 @@
+clc;
+clear;
+
+% Signaling Constraints
+
+n_lncds = 8;
+n_xbars = 4;
+sfp = 64;
+sfp_tput = 10; %[Gbps]
+lncd_tput = 2*sfp*sfp_tput; %fact 2 comes from duplex
+lncd_to_xbar_tput = 160; %[Gbps]
+xbar_tput = 2*lncd_to_xbar_tput*n_lncds;
+
+tx_per_xbar_chip = 128;
+rx_per_xbar_chip = 128;
+links_per_xbar_chip = tx_per_xbar_chip + rx_per_xbar_chip;
+xbar_dup_link_speed = [5, 10]; %[Gbps]
+xbar_single_chip_tput = links_per_xbar_chip .* xbar_dup_link_speed; 
+n_xbar_chips = ceil(xbar_tput./xbar_single_chip_tput);
+
+% Cost Calculation Script
+cost_per_watt = 20; %[$]
+five_gbps_watt = 1*60 + 1.3*17.4 + 3.3*0.3;
+watt_per_chip = [five_gbps_watt, 100];
+pow_cost_per_chip =cost_per_watt .* watt_per_chip;
+build_cost_per_chip = 300;
+
+xbar_cost = n_xbar_chips * (pow_cost_per_chip + build_cost_per_chip)
+
+
+
