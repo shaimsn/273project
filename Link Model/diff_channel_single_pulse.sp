@@ -176,10 +176,10 @@
 *                                                                       *
 *************************************************************************
  .INCLUDE './diff_stripline.rlgc'
- .INCLUDE './prbs7.inc'
- .INCLUDE './tx_4tap_diff.inc'
- .INCLUDE './rx_eq_diff.inc'
- .INCLUDE './filter.inc'
+ .INCLUDE '../Reference\ Channel/prbs7.inc'
+ .INCLUDE './Reference\ Channel/tx_4tap_diff.inc'
+ .INCLUDE './Reference\ Channel/rx_eq_diff.inc'
+ .INCLUDE './Reference\ Channel/filter.inc'
  .INCLUDE './xcede_4x8ortho.inc'
 
 
