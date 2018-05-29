@@ -37,15 +37,15 @@
 * XBAR -> LINECARD *
 * Shortest Lengths *
  .PARAM len1	= 1		    * Line segment 1 length, inches
- .PARAM len2	= 0	  * Line segment 2 length, inches
+ .PARAM len2	= 0.25	            * Line segment 2 length, inches
  .PARAM len3	= 5		    * Line segment 3 length, inches
  .PARAM len4	= 1		    * Line segment 4 length, inches
 
 * Longest Lengths
- .PARAM len1	= 13		* Line segment 1 length, inches
- .PARAM len2	= 0	  * Line segment 2 length, inches
- .PARAM len3	= 11		  * Line segment 3 length, inches
- .PARAM len4	= 1		    * Line segment 4 length, inches
+* .PARAM len1	= 12.75		* Line segment 1 length, inches
+* .PARAM len2	= 0.25 	  * Line segment 2 length, inches
+* .PARAM len3	= 11		  * Line segment 3 length, inches
+* .PARAM len4	= 1		    * Line segment 4 length, inches
 
 * LINECARD -> XBAR *
 * Shortest Lengths
