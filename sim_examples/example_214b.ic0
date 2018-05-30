@@ -1,0 +1,17 @@
+* "simulator" "HSPICE" 
+* "version" "I-2013.12-SP2 64-BIT"
+* "format" "HSP"
+* "rundate" "13:22:57 04/18/2018 "
+* "netlist" "example_214b.sp "
+* "runtitle" "* ee214b simulation example"
+* time =    0.            
+* temperature =   25.0000        
+*** BEGIN: Saved Operating Point ***                     
+.option 
++ gmindc=   1.0000p       
+.nodeset
++ dn =   1.0000        
++ dp =  -1.0000        
++ gn =   1.0000        
++ gp =  -1.0000        
+***   END: Saved Operating Point ***                     

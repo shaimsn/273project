@@ -1,0 +1,143 @@
+Using: /usr/class/ee/synopsys/hspice/I-2013.12-SP2/hspice/linux/hspice example_214b.sp
+ ****** HSPICE -- I-2013.12-SP2 64-BIT (May 27 2014) RHEL64 ******              
+  Copyright (C) 2014 Synopsys, Inc. All Rights Reserved.                        
+  Unpublished-rights reserved under US copyright laws.
+  This program is protected by law and is subject to the
+  terms and conditions of the license agreement from Synopsys.
+  Use of this program is your acceptance to be bound by the
+  license agreement. HSPICE is the trademark of Synopsys, Inc.
+  Input File: example_214b.sp                                                   
+  Command line options: example_214b.sp
+ lic:  
+ lic: FLEXlm: v10.9.8 
+ lic: USER:   murmann              HOSTNAME: corn28.stanford.edu 
+ lic: HOSTID: 001b213a6575         PID:      21876 
+ lic: Using FLEXlm license file: 
+ lic: 27000@cadlic0 
+ lic: Checkout 1 hspice 
+ lic: License/Maintenance for hspice will expire on 06-nov-2017/2016.06 
+ lic: 1(in_use)/200(total) FLOATING license(s) on SERVER 27000@cadlic0 
+ lic:   
+ Init: read install configuration file: /usr/class/ee/synopsys/hspice/I-2013.12-SP2/hspice/meta.cfg
+ 
+
+  
+      
+ **info** set option symb=1 internally to help for convergence.
+ *****************************************************************
+ ******  option summary
+ ******
+ runlvl  = 3         bypass  = 2         
+ **info** dc convergence successful at Newton-Raphson method 
+ ****** HSPICE -- I-2013.12-SP2 64-BIT (May 27 2014) RHEL64 ******              
+ ******  
+ * ee214b simulation example
+
+ ****** operating point information tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is     0.     
+    node    =voltage      node    =voltage      node    =voltage
+
+ +0:dn      =   1.0000  0:dp      =  -1.0000  0:gn      =   1.0000 
+ +0:gp      =  -1.0000 
+
+
+ **** voltage sources
+
+ subckt                                              
+ element  0:vdn      0:vdp      0:vgn      0:vgp     
+  volts      1.0000    -1.0000     1.0000    -1.0000 
+  current -850.0317u  297.5156u    0.         0.     
+  power    850.0317u  297.5156u    0.         0.     
+
+     total voltage source power dissipation=    1.1475m       watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                        
+ element  0:mn1      0:mp1     
+ model    0:nch      0:pch     
+ region     Saturati   Saturati
+  id       850.0317u -297.5156u
+  ibs        0.         0.     
+  ibd        0.         0.     
+  vgs        1.0000    -1.0000 
+  vds        1.0000    -1.0000 
+  vbs        0.         0.     
+  vth      484.2095m -498.0195m
+  vdsat    280.2579m -391.7424m
+  vod      515.7905m -501.9805m
+  beta      10.0440m    2.7365m
+  gam eff  583.2076m  531.4662m
+  gm         2.4835m  936.7492u
+  gds      102.9150u   49.7306u
+  gmb      572.3083u  297.1271u
+  cdtot      6.0281f    6.9657f
+  cgtot     10.2513f   10.8300f
+  cstot     12.2818f   12.6320f
+  cbtot      9.6158f    9.8912f
+  cgs        7.4511f    7.3958f
+  cgd        2.4180f    3.2356f
+
+
+
+
+          ***** job concluded
+ ****** HSPICE -- I-2013.12-SP2 64-BIT (May 27 2014) RHEL64 ******              
+ ******  
+ * ee214b simulation example
+
+ ****** job statistics summary tnom=  25.000 temp=  25.000 ******
+  
+  
+ ******  Machine Information  ******
+ CPU:
+ model name	: Quad-Core AMD Opteron(tm) Processor 2384
+ cpu MHz	: 2700.000
+  
+ OS:
+ Linux version 3.13.0-100-generic (buildd@lgw01-52) (gcc version 4.8.4 (Ubuntu 4.8.4-2ubuntu1~14.04.3) ) #147-Ubuntu SMP Tue Oct 18 16:48:51 UTC 2016
+
+
+  ******  HSPICE Threads Information  ******
+
+  Command Line Threads Count :     1
+  Available CPU Count        :     8
+  Actual Threads Count       :     1
+
+
+  ******  Circuit Statistics  ******
+  # nodes       =       7 # elements   =       6
+  # resistors   =       0 # capacitors =       0 # inductors   =       0
+  # mutual_inds =       0 # vccs       =       0 # vcvs        =       0
+  # cccs        =       0 # ccvs       =       0 # volt_srcs   =       4
+  # curr_srcs   =       0 # diodes     =       0 # bjts        =       0
+  # jfets       =       0 # mosfets    =       2 # U elements  =       0
+  # T elements  =       0 # W elements =       0 # B elements  =       0
+  # S elements  =       0 # P elements =       0 # va device   =       0
+  # vector_srcs =       0 # N elements =       0
+
+
+  ******  Runtime Statistics (seconds)  ******
+
+  analysis           time    # points   tot. iter  conv.iter
+  op point           0.00           1           4
+  dc sweep           0.33        1629        3267
+  readin             0.00
+  errchk             0.01
+  setup              0.00
+  output             0.00
+
+
+           peak memory used        175.41 megabytes
+           total cpu time            0.34 seconds
+           total elapsed time        1.34 seconds
+           job started at     13:51:00 12/25/2016
+           job ended   at     13:51:02 12/25/2016
+
+
+ lic: Release hspice token(s) 
+ lic: total license checkout elapse time:        0.96(s)

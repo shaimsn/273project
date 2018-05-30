@@ -1,0 +1,25 @@
+Mdi:ArrangeIcons
+ScopeSigMgr:loadpffile /afs/ir.stanford.edu/users/s/h/shaim/273/sim_examples/example_214b.sw0 1 openonly
+# PF:1
+wm geometry .sigmgr._PF:1 231x341+640+397
+wm geometry .sigmgr._PF:1 231x341+639+404
+wm geometry .sigmgr._PF:1 231x341+639+406
+wm geometry .sigmgr._PF:1 231x341+639+401
+wm geometry .sigmgr._PF:1 231x341+654+368
+wm geometry .sigmgr._PF:1 231x341+656+354
+wm geometry .sigmgr._PF:1 231x341+661+338
+wm geometry .sigmgr._PF:1 231x341+665+320
+wm geometry .sigmgr._PF:1 231x341+668+303
+wm geometry .sigmgr._PF:1 231x341+669+284
+wm geometry .sigmgr._PF:1 231x341+672+262
+wm geometry .sigmgr._PF:1 231x341+671+222
+wm geometry .sigmgr._PF:1 231x341+669+218
+wm geometry .sigmgr._PF:1 231x341+669+217
+pf:read PF:1 i(mn1)
+# WF:1:1
+Graph addsignal WF:1:1 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal0
+pf:read PF:1 i(mp1)
+# WF:1:2
+Graph addsignal WF:1:2 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal1
