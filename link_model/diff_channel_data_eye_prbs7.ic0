@@ -1,7 +1,7 @@
 * "simulator" "HSPICE" 
 * "version" "I-2013.12-SP2 64-BIT"
 * "format" "HSP"
-* "rundate" "16:03:28 05/30/2018 "
+* "rundate" "16:30:41 05/30/2018 "
 * "netlist" "diff_channel_data_eye_prbs7.sp "
 * "runtitle" "* backplane, coplanar midplane reference channel -- prbs7 data eye *"
 * time =    0.            
