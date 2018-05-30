@@ -1,0 +1,98 @@
+#!/usr/bin/wish
+#
+# Tcl/Tk script to display [diff_stripline] cross-sectional structure
+#
+# Copyright Synopsys Inc., 2010. 
+#
+
+# changing following mag factors to make different aspect ratio
+proc XP {x} { expr { 1.000000e+00 * $x } }
+proc YP {y} { expr { 1.000000e+00 * $y } }
+
+pack [canvas .fsStr -width [XP 700] -height [YP 500] ]
+proc X0 {} { XP 100 }
+proc Y0 {} { YP 400 }
+proc XE {} { XP 650 }
+proc getX {x} { expr {($x - [X0]) * 1.000000e+00/ [XP 1.0] } }
+proc getY {y} { expr {([Y0] - $y) * 1.000000e+00/ [YP 1.0] } }
+proc showXY {x y} {
+.fsStr create rect 20  10 180 30 -fill white
+.fsStr create text 100 20 -text "( [ getX $x ]um, [ getY $y ]um )" 
+}
+proc showMProp {s r} {
+.fsStr create rect 20 [expr {[Y0]+70}] 680 [expr {[Y0]+90}] -fill white -outline white
+if {$s < 0.0} then {
+  .fsStr create text 20 [expr {[Y0]+80}] -text "conductivity=infinity,  roughness=[expr $r]" -anchor w
+  } else {
+  .fsStr create text 20 [expr {[Y0]+80}] -text "conductivity=[expr $s],  roughness=[expr $r]" -anchor w
+  }
+}
+proc eraseMProp {} {
+.fsStr create rect 20 [expr {[Y0]+70}] 680 [expr {[Y0]+90}] -fill white -outline white
+}
+proc showDProp {s r} {
+.fsStr create rect 20 [expr {[Y0]+70}] 680 [expr {[Y0]+90}] -fill white -outline white
+.fsStr create text 20 [expr {[Y0]+80}] -text "er=[expr $s],  losstangent=[expr $r]" -anchor w
+}
+proc eraseDProp {} {
+.fsStr create rect 20 [expr {[Y0]+70}] 680 [expr {[Y0]+90}] -fill white -outline white
+}
+set backgnd [.fsStr create rect 0 0 [XP 700] [YP 500] -fill white]
+.fsStr bind $backgnd <B1-Motion>  { showXY %x %y }
+bind . <Escape> {exit} 
+.fsStr create text [XP 650] 20 -text "esc to exit"
+.fsStr bind $backgnd <Enter> { showDProp 1.000000e+00 0.000000e+00 }
+.fsStr bind $backgnd <Leave> { eraseDProp }
+#
+# layerstacks 
+#
+#layer from y=0.000000e+00 to y=1.524000e-05
+set cond_001 [.fsStr create rect  [XP 0] [YP 400] [XP 700] [YP 385] -outline #81f -fill #81f ]
+.fsStr bind $cond_001 <B1-Motion>  { showXY %x %y }
+.fsStr bind $cond_001 <Enter> { showMProp 5.760000e+07 4.000000e-06 }
+.fsStr bind $cond_001 <Leave> { eraseMProp }
+#layer from y=1.524000e-05 to y=1.447800e-04
+set diel_001 [.fsStr create rect  [XP 0] [YP 385] [XP 700] [YP 255] -outline #aaa -fill #aaa ]
+.fsStr bind $diel_001 <B1-Motion>  { showXY %x %y }
+.fsStr bind $diel_001 <Enter> { showDProp 3.680000e+00 5.000000e-03 }
+.fsStr bind $diel_001 <Leave> { eraseDProp }
+#layer from y=1.447800e-04 to y=2.794000e-04
+set diel_002 [.fsStr create rect  [XP 0] [YP 255] [XP 700] [YP 121] -outline #ccc -fill #ccc ]
+.fsStr bind $diel_002 <B1-Motion>  { showXY %x %y }
+.fsStr bind $diel_002 <Enter> { showDProp 3.630000e+00 5.000000e-03 }
+.fsStr bind $diel_002 <Leave> { eraseDProp }
+#layer from y=2.794000e-04 to y=2.946400e-04
+set cond_002 [.fsStr create rect  [XP 0] [YP 121] [XP 700] [YP 105] -outline #81f -fill #81f ]
+.fsStr bind $cond_002 <B1-Motion>  { showXY %x %y }
+.fsStr bind $cond_002 <Enter> { showMProp 5.760000e+07 4.000000e-06 }
+.fsStr bind $cond_002 <Leave> { eraseMProp }
+#
+# conductors 
+#
+# trapezoidal:  bottom=1.143000e-04 top=1.143000e-04 thickness=1.524000e-05
+# location:  x=0.000000e+00 y=1.447800e-04
+set cond_003 [.fsStr create poly # rectangle: w=1.143000e-04 h=1.524000e-05
+# location:  x=0.000000e+00 y=1.447800e-04
+set cond_004 [.fsStr create rect  [XP 100] [YP 255] [XP 214] [YP 240] -fill #81f ]
+.fsStr bind $cond_004 <B1-Motion>  { showXY %x %y }
+.fsStr bind $cond_004 <Enter> { showMProp 5.760000e+07 4.000000e-06 }
+.fsStr bind $cond_004 <Leave> { eraseMProp }
+# trapezoidal:  bottom=1.143000e-04 top=1.143000e-04 thickness=1.524000e-05
+# location:  x=3.048000e-04 y=1.447800e-04
+set cond_005 [.fsStr create poly # rectangle: w=1.143000e-04 h=1.524000e-05
+# location:  x=3.048000e-04 y=1.447800e-04
+set cond_006 [.fsStr create rect  [XP 405] [YP 255] [XP 519] [YP 240] -fill #81f ]
+.fsStr bind $cond_006 <B1-Motion>  { showXY %x %y }
+.fsStr bind $cond_006 <Enter> { showMProp 5.760000e+07 4.000000e-06 }
+.fsStr bind $cond_006 <Leave> { eraseMProp }
+#
+# axis and title 
+#
+.fsStr create line [expr {[X0]/2}] [Y0] [XE] [Y0] -fill red
+.fsStr create line [X0] [expr {[X0]/2}] [X0] [expr {[Y0] + [X0]/2}] -fill red
+.fsStr create line [XE] [expr {[Y0] - 10}] [XE] [expr {[Y0] + 10}] -fill red
+.fsStr create line [expr {[X0] - 10}] [X0] [expr {[X0] + 10}] [X0] -fill red
+.fsStr create text [expr {[X0] - 14}] [expr {[Y0] + 20}] -text "0" -fill black -font {Helvetica 14}
+.fsStr create text [XE] [expr {[Y0] + 20}] -text "[ getX [XE] ]um" -fill black -font {Helvetica 14}
+.fsStr create text [expr {[X0] - 40}] [X0] -text "[ getY [X0] ]um" -fill black -font {Helvetica 14}
+.fsStr create text  [XP 350] [YP 80] -text "\[ diff_stripline \]" -font {Helvetica 14}

@@ -1,0 +1,64 @@
+Mdi:ArrangeIcons
+ScopeSigMgr:loadpffile {{/afs/ir.stanford.edu/users/s/h/shaim/273/273project/Link Model/diff_channel_single_pulse.tr0}} 1 openonly
+# PF:1
+wm geometry .sigmgr._PF:1 231x341+640+386
+wm geometry .sigmgr._PF:1 231x341+640+338
+wm geometry .sigmgr._PF:1 231x341+640+320
+wm geometry .sigmgr._PF:1 231x341+640+301
+wm geometry .sigmgr._PF:1 231x341+640+275
+wm geometry .sigmgr._PF:1 231x341+638+264
+wm geometry .sigmgr._PF:1 231x341+634+243
+wm geometry .sigmgr._PF:1 231x341+631+222
+wm geometry .sigmgr._PF:1 231x341+627+202
+wm geometry .sigmgr._PF:1 231x341+623+185
+wm geometry .sigmgr._PF:1 231x341+616+156
+wm geometry .sigmgr._PF:1 231x341+615+150
+wm geometry .sigmgr._PF:1 231x341+612+140
+wm geometry .sigmgr._PF:1 231x341+612+138
+wm geometry .sigmgr._PF:1 231x341+610+132
+wm geometry .sigmgr._PF:1 231x341+609+127
+wm geometry .sigmgr._PF:1 231x341+607+124
+wm geometry .sigmgr._PF:1 231x341+607+122
+wm geometry .sigmgr._PF:1 231x341+606+119
+wm geometry .sigmgr._PF:1 231x341+605+117
+pf:read PF:1 v(rx_diff)
+# WF:1:1
+Graph addsignal WF:1:1 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal0
+pf:read PF:1 v(in)
+# WF:1:2
+Graph addsignal WF:1:2 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal1
+pf:read PF:1 v(rx_diff)
+# WF:1:1
+Graph addsignal WF:1:1 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal2
+ScopeSigMgr:Unload 0 {{(1) diff_channel_single_pulse.tr0}}
+Graph0 delsignal Signal0
+Graph0 delsignal Signal1
+Graph0 delsignal Signal2
+ScopeSigMgr:loadpffile {{/afs/ir.stanford.edu/users/s/h/shaim/273/273project/Link Model/diff_channel_single_pulse.tr0}} 1 openonly
+# PF:2
+wm geometry .sigmgr._PF:2 231x341+640+367
+wm geometry .sigmgr._PF:2 231x341+640+357
+wm geometry .sigmgr._PF:2 231x341+640+333
+wm geometry .sigmgr._PF:2 231x341+640+303
+wm geometry .sigmgr._PF:2 231x341+640+298
+wm geometry .sigmgr._PF:2 231x341+640+286
+wm geometry .sigmgr._PF:2 231x341+640+277
+wm geometry .sigmgr._PF:2 231x341+636+266
+wm geometry .sigmgr._PF:2 231x341+634+258
+wm geometry .sigmgr._PF:2 231x341+633+252
+wm geometry .sigmgr._PF:2 231x341+632+247
+wm geometry .sigmgr._PF:2 231x341+630+241
+wm geometry .sigmgr._PF:2 231x341+628+236
+wm geometry .sigmgr._PF:2 231x341+627+235
+wm geometry .sigmgr._PF:2 231x341+626+232
+wm geometry .sigmgr._PF:2 231x341+627+232
+wm geometry .sigmgr._PF:2 231x341+625+229
+wm geometry .sigmgr._PF:2 231x341+624+229
+wm geometry .sigmgr._PF:2 231x341+625+229
+pf:read PF:2 v(rx_diff)
+# WF:2:1
+Graph addsignal WF:2:1 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal0
