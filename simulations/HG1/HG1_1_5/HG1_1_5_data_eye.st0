@@ -1,0 +1,13 @@
+***** HSPICE -- I-2013.12-SP2 64-BIT (May 27 2014) RHEL64 ******
+ Input File: HG1_1_5_data_eye.sp
+ lic:
+ lic: FLEXlm: v10.9.8
+ lic: USER:   ymalviya             HOSTNAME: rice03
+ lic: HOSTID:                      PID:      21035
+ lic: Using FLEXlm license file:
+ lic: 27000@cadlic0.stanford.edu
+ lic: Checkout 1 hspice
+ lic: License/Maintenance for hspice will expire on 16-oct-2018/2017.12
+ lic: 1(in_use)/200(total) FLOATING license(s) on SERVER 27000@cadlic0.stanford.edu
+ lic:
+ lic: Release hspice token(s)

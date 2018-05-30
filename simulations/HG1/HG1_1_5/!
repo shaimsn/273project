@@ -1,0 +1,26 @@
+Using: /afs/ir/class/ee/synopsys/hspice/I-2013.12-SP2/hspice/linux/hspice  HG1_1_5_data_eye HG1_1_5_data_eye.lis
+ ****** HSPICE -- I-2013.12-SP2 64-BIT (May 27 2014) RHEL64 ******              
+  Copyright (C) 2014 Synopsys, Inc. All Rights Reserved.                        
+  Unpublished-rights reserved under US copyright laws.
+  This program is protected by law and is subject to the
+  terms and conditions of the license agreement from Synopsys.
+  Use of this program is your acceptance to be bound by the
+  license agreement. HSPICE is the trademark of Synopsys, Inc.
+  Input File: HG1_1_5_data_eye.sp                                               
+  Command line options: HG1_1_5_data_eye HG1_1_5_data_eye.lis
+ lic:  
+ lic: FLEXlm: v10.9.8 
+ lic: USER:   ymalviya             HOSTNAME: rice03 
+ lic: HOSTID:                      PID:      21035 
+ lic: Using FLEXlm license file: 
+ lic: 27000@cadlic0.stanford.edu 
+ lic: Checkout 1 hspice 
+ lic: License/Maintenance for hspice will expire on 16-oct-2018/2017.12 
+ lic: 1(in_use)/200(total) FLOATING license(s) on SERVER 27000@cadlic0.stanford.edu 
+ lic:   
+ Init: read install configuration file: /afs/ir/class/ee/synopsys/hspice/I-2013.12-SP2/hspice/meta.cfg
+ **error** (HG1_1_5_data_eye.sp:183) unable to open file "../../xcede_plus.inc" .Either file doesn't exists or path is wrong. Please enter the correct file location. 
+
+               ***** job aborted
+ lic: Release hspice token(s) 
+ lic: total license checkout elapse time:        1.06(s)

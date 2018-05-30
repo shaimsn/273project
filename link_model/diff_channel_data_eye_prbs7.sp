@@ -124,9 +124,9 @@
 
  Xvp2    jp3   jp4     (via) zvia=40			* Daughter card via
  Xvn2    jn3   jn4     (via) zvia=40			* Daughter card via
- Xk1 jp4 jn4   jp5 jn5 (xconn)				* Xcede+ connector
-*Xkp1 0  jp4   jp5     (conn)				* Backplane connector
-*Xkn1 0  jn4   jn5     (conn) 				* Backplane connector
+*Xk1 jp4 jn4   jp5 jn5 (xconn)				* Xcede+ connector
+ Xkp1 0  jp4   jp5     (conn)				* Backplane connector
+ Xkn1 0  jn4   jn5     (conn) 				* Backplane connector
  Xvp3    jp5   jp6     (mvia)				* Backplane via
  Xvn3    jn5   jn6     (mvia)				* Backplane via
 
@@ -135,9 +135,9 @@
 
  Xvp4    jp7   jp8     (mvia) 				* Backplane via
  Xvn4    jn7   jn8     (mvia) 				* Backplane via
- Xk2 jp9 jn9   jp8 jn8 (xconn)
-*Xkp2 0  jp9   jp8     (conn)				* Backplane connector
-*Xkn2 0  jn9   jn8     (conn)				* Backplane connector
+*Xk2 jp9 jn9   jp8 jn8 (xconn)
+ Xkp2 0  jp9   jp8     (conn)				* Backplane connector
+ Xkn2 0  jn9   jn8     (conn)				* Backplane connector
  Xvp5    jp9   jp10    (via) zvia=40			* Daughter card via
  Xvn5    jn9   jn10    (via) zvia=40			* Daughter card via
 
@@ -180,7 +180,7 @@
  .INCLUDE './tx_4tap_diff.inc'
  .INCLUDE './rx_eq_diff.inc'
  .INCLUDE './filter.inc'
- .INCLUDE './xcede_plus.inc'
+ .INCLUDE './xcede_4x8ortho.inc'
 
 
 *************************************************************************

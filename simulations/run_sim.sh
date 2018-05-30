@@ -2,11 +2,11 @@
 # The following script simulates all configurations specified by dynamically generating the
 # spice files for given material and length scenarios.
 
-CURRPATH=/home/ymalviya/afs-home/EE273/design_project/273project/Stripline_Files
+CURRPATH=/home/ymalviya/afs-home/EE273/design_project/273project/simulations
 
-length1=(1 12.75 5.75 11.75)
-length3=(5 11 0.25 12)
-material=(HG1 HG2 HG3 HG4 MG1 MG2 MG3 MG4 LG1 LG2 LG3 LG4)
+length1=(1) #12.75 5.75 11.75)
+length3=(5) #11 0.25 12)
+material=(HG1) #HG2 HG3 HG4 MG1 MG2 MG3 MG4 LG1 LG2 LG3 LG4)
 for i in "${material[@]}"
 do
     for j in "${length1[@]}"
