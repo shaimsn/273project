@@ -10,12 +10,16 @@ addpath('./hspice_toolbox')
 %     return;
 % end
 
-h = loadsig('../link_model/diff_channel_single_pulse.tr0');
-lssig(h)
+pulse_h = loadsig('../link_model/diff_channel_single_pulse.tr0');
+lssig(pulse_h)
 
-v_rx_diff = evalsig(h,'v_rx_diff');
+v_rx_diff = evalsig(pulse_h,'v_rx_diff');
 tstep = 5e-12;
 [maxval, maxndx] = max(v_rx_diff)
+
+eye_h = loadsig('../link_model/diff_channel_data_eye_prbs7.tr0');
+lssig(eye_h)
+v_rx_diff = evalsig(eye_h,'v_rx_diff');
 
 % idp = evalsig(h,'i_mp1');
 % vds = evalsig(h,'ds');
