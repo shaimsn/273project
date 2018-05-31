@@ -40,7 +40,7 @@ c = dirty_in_mat\target;
 c = c./sum(abs(c));
 
 eq_coeff_for_hspice = -c
-save eq_coeff.txt eq_coeff_for_hspice -ascii
+
 
 
 %Plotting stuff
@@ -51,7 +51,7 @@ plot(tt(max_ndx),vmax, 'r*')
 plot(tt(max_ndx + ui_d),vmax_p1ui, 'r*')
 plot(tt(max_ndx + 2*ui_d),vmax_p2ui, 'r*')
 plot(tt(max_ndx - ui_d),vmax_m1ui, 'r*')
-saveas(gcf, 'v_rx.jpeg')
+saveas(gcf, '../test.jpeg')
 set(gca,'FontSize',14);
 title('Rx Voltage')
 ylabel('Rx Voltage [V]');
