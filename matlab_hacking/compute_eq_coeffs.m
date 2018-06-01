@@ -57,4 +57,4 @@ title('Rx Voltage')
 ylabel('Rx Voltage [V]');
 xlabel('Time [s]');
 grid;
-
+exit
