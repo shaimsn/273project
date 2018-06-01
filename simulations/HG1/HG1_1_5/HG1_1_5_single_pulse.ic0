@@ -1,7 +1,7 @@
 * "simulator" "HSPICE" 
 * "version" "I-2013.12-SP2 64-BIT"
 * "format" "HSP"
-* "rundate" "16:17:17 05/30/2018 "
+* "rundate" "13:34:46 06/01/2018 "
 * "netlist" "HG1_1_5_single_pulse.sp "
 * "runtitle" "* backplane, coplanar midplane reference channel -- single pulse respo"
 * time =    0.            

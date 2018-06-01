@@ -28,17 +28,17 @@
  .PARAM ap2     = 10g           * CTLE secondary pole frequency, Hz
 
 * Driver Pre-emphais *
- .PARAM pre1	=  x4		* Driver pre-cursor pre-emphasis
- .PARAM post1	=  x5		* Driver 1st post-cursor pre-emphasis
- .PARAM post2	=  x6		* Driver 2nd post-cursor pre-emphasis
+ .PARAM pre1	=  1.4096601e-01		* Driver pre-cursor pre-emphasis
+ .PARAM post1	=  8.1653139e-02		* Driver 1st post-cursor pre-emphasis
+ .PARAM post2	=  1.6835957e-01		* Driver 2nd post-cursor pre-emphasis
 
 * PCB Line Lengths *
 
 * XBAR -> LINECARD *
 * Shortest Lengths *
- .PARAM len1	= x1		    * Line segment 1 length, inches
+ .PARAM len1	= 1		    * Line segment 1 length, inches
  .PARAM len2	= 0.25	            * Line segment 2 length, inches
- .PARAM len3	= x2		    * Line segment 3 length, inches
+ .PARAM len3	= 5		    * Line segment 3 length, inches
  .PARAM len4	= 1		    * Line segment 4 length, inches
 
 * Eye delay -- In awaves viewer, plot signal rx_diff against signal eye
@@ -156,7 +156,7 @@
 *			Libraries and Included Files			*
 *                                                                       *
 *************************************************************************
- .INCLUDE '../x3'
+ .INCLUDE '../HG1_long.rlgc'
  .INCLUDE '../../prbs7.inc'
  .INCLUDE '../../tx_4tap_diff.inc'
  .INCLUDE '../../rx_eq_diff.inc'
